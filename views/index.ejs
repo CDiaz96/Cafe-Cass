@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Cafe</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Cafe Cass</h1>
+      <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/coffee-beans.jpg" alt="">
+      <section>
+        <h2>Make an order</h2>
+        <form class="orderCoffee" action="/makeOrder" method="POST">
+          <input id="name" type="text" name="name" placeholder="customer Name" required>
+          <input id="longer" type="text" name="order" placeholder="What would you like to order" required>
+          <button id="update" type="submit" name="button">Place Order</button>
+        </form>
+      </section>
+      <h2>Once you order please wait a few mintues for your order</h2>
+      <img src="" alt="">
+      <p>Employee Login </p>
+      <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>Login</a>
+      <!-- <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Signup</a> -->
+
+    </div>
+
+  </div>
+  <script src="order.js" type="text/javascript">
+
+  </script>
+</body>
+
+</html>

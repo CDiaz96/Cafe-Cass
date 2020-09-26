@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Cafe</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-header text-center">
+      <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+      <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+      <a href="/orderstatus" class="btn btn-default btn-sm">Admin Area :Check Order Status</a>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <h3>Orders in Queue</h3>
+    <ul class="">
+      <% for(var i=0; i<orders.length; i++) {%>
+      <li class="">
+        <span><%= orders[i].name %></span>
+        <span><%= orders[i].order %></span>
+        <% if (user.local.email === "john@john") { %>
+        <span class="hide">barista: John</span>
+        <% } else if(user.local.email === "carolin@carolin") { %>
+        <span class="hide">barista: Carolin</span>
+        <% } else if(user.local.email === "rahma@rahma") { %>
+        <span class="hide">barista: Rahma</span>
+        <% }else if(user.local.email === "shawn@shawn") { %>
+        <span class="hide">barista: Shawn</span>
+        <% } else if(user.local.email === "ibrahim@ibrahim") { %>
+        <span class="hide">barista:Ibrahim</span>
+        <%} else { %>
+        <span class="hide">barista:Admin</span>
+        <% } %>
+        <span><i class="fa fa-check-square" aria-hidden="true"></i></span> <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      </li>
+      <% } %>
+    </ul>
+
+  </div>
+  <!-- <div class="col-sm-6">
+    <h3>Orders in Queue</h3>
+    <ul class="">
+      <% for(var i=0; i<orders.length; i++) {%>
+      <li class="">
+        <span><%= orders[i].name %></span>
+        <span><%= orders[i].order %></span>
+        <label for="barista">Barista :</label>
+        <select name="color" id="">
+          <option value="shawn">shawn</option>
+          <option value="ibrahim">ibrahim</option>
+          <option value="carolin">carolin</option>
+          <option value="rahma">rahma</option>
+          <option value="john">john</option>
+        </select>
+        <span><i class="fa fa-check-square" aria-hidden="true"></i></span> <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      </li>
+      <% } %>
+    </ul> -->
+
+
+
+
+
+
+  <!-- <h2>Add a message</h2>
+    <% if (user.local.email) { %>
+    <form action="/messages" method="POST">
+      <input type="text" value="<%= user.local.email %>" name="name">
+      <input type="text" placeholder="message" name="msg">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <% } %> -->
+
+  </div>
+
+
+  <!-- <div class="row">
+
+
+    <div class="col-sm-6">
+      <div class="well">
+        <h3><span class="fa fa-user"></span> Local</h3>
+
+        <% if (user.local.email) { %>
+        <p>
+          <strong>id</strong>: <%= user._id %><br>
+          <strong>email</strong>: <%= user.local.email %><br>
+          <strong>password</strong>: <%= user.local.password %>
+        </p>
+
+        <a href="/unlink/local" class="btn btn-default">Unlink</a>
+        <% } else { %>
+        <a href="/connect/local" class="btn btn-default">Connect
+          Local</a>
+        <% } %>
+
+      </div> -->
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
